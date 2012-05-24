@@ -1,0 +1,95 @@
+#chart {
+	padding-bottom: 10px;
+}
+
+
+svg.chart {
+	background: white no-repeat;
+	box-shadow: 0;
+	border-radius: 0;
+	border: 0;
+}
+
+
+svg.chart text {
+	font-family: Arial;
+	font-size: 14px;
+	color: black;
+	fill: black;
+	dominant-baseline: hanging;	
+}
+
+
+svg.chart text.chart-title {
+	font-size: 20px;
+	font-weight: bold;
+	text-anchor: middle;
+}
+
+
+svg.chart text.chart-subtitle {
+	font-size: 16px;
+	font-weight: bold;
+	text-anchor: middle;
+}
+
+
+svg.chart g.chart-legend {
+}
+
+svg.chart g.chart-legend rect.chart-legend-border {
+	stroke: white;
+	stroke-width: 1;
+	fill: none;
+	visibility: hidden;
+}
+
+svg.chart text.chart-legend-series {
+	text-anchor: left;
+}
+
+
+svg.chart text.chart-axis-title {
+	font-weight: bold;
+}
+
+svg.chart text.chart-axis-title.y {
+	dominant-baseline: middle;
+	text-anchor: middle;
+}
+
+
+svg.chart line.chart-axis-grid {
+	stroke: darkgray;
+	stroke-width: 1;
+}
+
+svg.chart line.chart-axis-grid.x {
+	visibility: hidden;
+}
+
+svg.chart text.chart-axis-grid-text.x {
+	text-anchor: middle;
+}
+
+svg.chart text.chart-axis-grid-text.y {
+	dominant-baseline: middle;
+	text-anchor: end;
+}
+
+
+svg.chart rect.chart-data-border {
+	stroke: white;
+	stroke-width: 2;
+	fill: none;
+	visibility: hidden;
+}
+
+svg.chart path.chart-data-line {
+	stroke-width: 2;
+	fill: none;
+}
+
+svg.chart .chart-data-point {
+	stroke-width: 2;
+}

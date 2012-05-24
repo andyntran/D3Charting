@@ -1,0 +1,117 @@
+html, body {
+	font-family: Arial Narrow;
+	font-size: 14px;
+}
+
+fieldset {
+	border: 1px solid #79913A;
+	border-radius: 4px;
+	padding: 4px 8px;
+	margin: 4px 8px;
+}
+
+fieldset legend {
+	color: #557504;
+	font-weight: bold;
+	font-size: 120%;
+}
+
+#settings {
+	display: inline-block;
+	float: left;
+}
+
+#settings .title {
+	display: block;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+#settings .name {
+	display: inline-block;
+	width: 88px;
+	padding-right: 2px;
+	text-align: right;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+#settings input {
+	font-family: Arial Narrow;
+	font-size: 14px;
+	margin: 2px;
+	width: 165px;
+}
+
+#settings select {
+	font-family: Arial Narrow;
+	font-size: 14px;
+	margin: 2px;
+	width: 169px;
+	padding:2px 1px;
+}
+
+#settings input.numeric {
+	width: 32px;
+}
+
+
+#series {
+	clear: both;
+}
+
+#series .title {
+	display: block;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+#series .series {
+	margin-bottom: 12px;
+}
+
+#series .name {
+	display: inline-block;
+	width: 108px;
+	padding-right: 2px;
+	text-align: right;
+	font-weight: bold;
+	white-space: nowrap;	
+}
+
+#series .name.url,
+#series .name.series-name {
+	width: 44px;
+}
+
+#series input {
+	font-family: Arial Narrow;
+	font-size: 14px;
+	margin: 2px;
+}
+
+#series input.data-url {
+	width: 716px;
+}
+
+#series input.key {
+	width: 80px;
+}
+
+#series span.series-color {
+	display: inline-block;
+	border: 2px solid gray;
+	width: 16px;
+	height: 16px;
+	margin-bottom: -4px;
+}
+
+
+#chart {
+	padding: 8px;
+	display: inline-block;
+}
+
+#chartAreaUpdateButton {
+	float: right;
+}

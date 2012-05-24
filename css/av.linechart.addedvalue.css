@@ -1,0 +1,80 @@
+#chart.added-value svg.chart {
+	background-color: #61116a;
+	background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNjExMTZhIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFkMGUyMiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+	background-image: -moz-linear-gradient(-45deg, #61116a 0%, #1d0e22 100%);
+	background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#61116a), color-stop(100%,#1d0e22));
+	background-image: -webkit-linear-gradient(-45deg, #61116a 0%,#1d0e22 100%);
+	background-image: -o-linear-gradient(-45deg, #61116a 0%,#1d0e22 100%);
+	background-image: -ms-linear-gradient(-45deg, #61116a 0%,#1d0e22 100%);
+	background-image: linear-gradient(-45deg, #61116a 0%,#1d0e22 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#61116a', endColorstr='#1d0e22',GradientType=1 );
+	box-shadow: 5px 5px 5px #888;
+	border-radius: 8px;
+	border: 1px solid white;
+}
+
+
+#chart.added-value svg.chart text {
+	fill: white;
+}
+
+
+#chart.added-value svg.chart text.chart-title {
+	fill: rgb(148, 193, 31);
+}
+
+
+#chart.added-value svg.chart text.chart-subtitle {
+	fill: rgb(148, 193, 31);
+}
+
+
+#chart.added-value svg.chart g.chart-legend {
+}
+
+#chart.added-value svg.chart g.chart-legend rect.chart-legend-border {
+	stroke: white;
+	fill: none;
+	visibility: visible;
+}
+
+#chart.added-value svg.chart text.chart-legend-series {
+}
+
+
+#chart.added-value svg.chart text.chart-axis-title {
+}
+
+#chart.added-value svg.chart text.chart-axis-title.y {
+}
+
+
+#chart.added-value svg.chart line.chart-axis-grid {
+	stroke: lightgray;
+}
+
+#chart.added-value svg.chart line.chart-axis-grid.x {
+	visibility: visible;
+}
+
+#chart.added-value svg.chart text.chart-axis-grid-text.x {
+}
+
+#chart.added-value svg.chart text.chart-axis-grid-text.y {
+}
+
+
+#chart.added-value svg.chart rect.chart-data-border {
+	fill: white;
+	visibility: visible;
+	fill-opacity:0.1;
+}
+
+#chart.added-value svg.chart path.chart-data-line {
+	stroke-width: 2;
+	fill: none;
+}
+
+#chart.added-value svg.chart .chart-data-point {
+	stroke-width: 2;
+}

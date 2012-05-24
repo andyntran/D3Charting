@@ -1,0 +1,114 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>D3 Line Chart Demo</title>
+
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/colorpicker.css" />
+	<link rel="stylesheet" href="css/av.linechart.css" />
+	<link rel="stylesheet" href="css/av.linechart.gray.css" />
+	<link rel="stylesheet" href="css/av.linechart.addedvalue.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<!--[if gte IE 9]>
+	  <style type="text/css">
+	    svg.chart {
+	       filter: none;
+	    }
+	  </style>
+	<![endif]-->	
+
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="http://mbostock.github.com/d3/d3.v2.js?2.8.1"></script> 
+	<script type="text/javascript" src="js/libs/ColorPicker/colorpicker.min.js"></script>
+	<script type="text/javascript" src="js/libs/jsUnit/jsUnitCore.js"></script>
+	<!--[if lt IE 9 ]>
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+	<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+	<![endif]-->
+
+	<script type="text/javascript" src="js/av.linechart.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/tests.js"></script>
+</head>
+
+<body>
+	<div id="series">
+		<fieldset>
+			<legend>Series</legend>
+			<button id="seriesListAddButton">Add</button><button id="seriesListUpdateButton">Update</button>
+		</fieldset>
+	</div>
+
+	<div id="settings">
+		<fieldset>
+			<legend>Graph</legend>
+				<span class="name">Width</span><input type="text" id="graphWidth" value="" maxlength="4" class="numeric" />
+				<span class="name">Height</span><input type="text" id="graphHeight" value="" maxlength="4" class="numeric" /><br/>
+				<span class="name">Style</span><select id="graphStyle"><option selected="selected" value="">Default</option><option value="gray">Gray</option><option value="added-value">Added Value</option></select><br/>
+		</fieldset>
+
+		<fieldset>
+			<legend>Title</legend>
+				<span class="name">Text</span><input type="text" id="titleText" value="" /><br/>
+				<span class="name">Vertical Align</span><select id="titleVerticalAlign"><option>top</option><option>middle</option><option>bottom</option></select><br/>
+				<span class="name">Horizontal Align</span><select id="titleHorizontalAlign"><option>left</option><option>center</option><option>right</option></select><br/>
+				<span class="name">X</span><input type="text" id="titleX" value="" maxlength="4" class="numeric" />
+				<span class="name">Y</span><input type="text" id="titleY" value="" maxlength="4" class="numeric" /><br/>
+		</fieldset>
+
+		<fieldset>
+			<legend>Sub Title</legend>
+				<span class="name">Text</span><input type="text" id="subTitleText" value="" /><br/>
+				<span class="name">Vertical Align</span><select id="subTitleVerticalAlign"><option>top</option><option>middle</option><option>bottom</option></select><br/>
+				<span class="name">Horizontal Align</span><select id="subTitleHorizontalAlign"><option>left</option><option>center</option><option>right</option></select><br/>
+				<span class="name">X</span><input type="text" id="subTitleX" value="" maxlength="4" class="numeric" />
+				<span class="name">Y</span><input type="text" id="subTitleY" value="" maxlength="4" class="numeric" />
+		</fieldset>
+
+		<fieldset>
+			<legend>Legend</legend>
+				<span class="name">Layout</span><select id="legendLayout"><option>vertical</option><option>horizontal</option></select><br/>
+				<span class="name">Vertical Align</span><select id="legendVerticalAlign"><option>top</option><option>middle</option><option>bottom</option></select><br/>
+				<span class="name">Horizontal Align</span><select id="legendHorizontalAlign"><option>left</option><option>center</option><option>right</option></select><br/>
+				<span class="name">X</span><input type="text" id="legendX" value="" maxlength="4" class="numeric" />
+				<span class="name">Y</span><input type="text" id="legendY" value="" maxlength="4" class="numeric" />
+		</fieldset>
+
+		<fieldset>
+			<legend>Chart Area</legend>
+				<span class="name">Margin <span title="left top right bottom" style="cursor:pointer; display: inline-block; background-color: gray; padding: 2px 4px; border-radius: 8px; color: white;">?</span></span>
+				<input type="text" id="chartMarginLeft" value="" maxlength="4" class="numeric" tile="margin left" />
+				<input type="text" id="chartMarginTop" value="" maxlength="4" class="numeric" tile="margin top" />
+				<input type="text" id="chartMarginRight" value="" maxlength="4" class="numeric" tile="margin right" />
+				<input type="text" id="chartMarginBottom" value="" maxlength="4" class="numeric" tile="margin bottom" /><br/>
+
+				<br/>
+				<span class="name">X-Axis Title</span><input type="text" id="chartXAxisTitle" value="" /><br/>
+				<span class="name">Interval</span><input type="text" id="chartXAxisInterval" value="" maxlength="4" class="numeric" />
+				<span class="name">Grid Start At</span><input type="text" id="chartXAxisGridStartAt" value="" maxlength="4" class="numeric" /><br/>
+				<span class="name">Min</span><input type="text" id="chartXAxisMin" value="" maxlength="4" class="numeric" />
+				<span class="name">Max</span><input type="text" id="chartXAxisMax" value="" maxlength="4" class="numeric" /><br />
+
+				<br/>
+				<span class="name">Y-Axis Title</span><input type="text" id="chartYAxisTitle" value="" /><br/>
+				<span class="name">Interval</span><input type="text" id="chartYAxisInterval" value="" maxlength="4" class="numeric" />
+				<span class="name">Grid Start At</span><input type="text" id="chartYAxisGridStartAt" value="" maxlength="4" class="numeric" /><br/>
+				<span class="name">Min</span><input type="text" id="chartYAxisMin" value="" maxlength="4" class="numeric" />
+				<span class="name">Max</span><input type="text" id="chartYAxisMax" value="" maxlength="4" class="numeric" /><br />
+
+				<button id="chartAreaUpdateButton">Update</button>
+		</fieldset>
+	</div>
+
+	<div id="chart"></div>
+</body>
+
+</html>
